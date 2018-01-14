@@ -12,10 +12,10 @@
   %thead
     %tr
       %th{:class => @title} 
-        = link_to 'Movie Title', movies_path(:sort=>'title'), :id => 'title_header'
+        = link_to 'Movie Title', movies_path(:sort => 'title',:ratings => @current_ratings), :id => 'title_header'
       %th Rating
       %th{:class => @release} 
-        = link_to 'Release Date', movies_path(:sort=>'release_date'), :id => 'release_date_header'
+        = link_to 'Release Date',movies_path(:sort => 'release_date',:ratings => @current_ratings), :id => 'release_date_header'
       %th More Info
   %tbody
     - @movies.each do |movie|
